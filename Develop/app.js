@@ -9,10 +9,108 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
+const team = [];
 
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
+const managerQuestions = [
+    {
+        type: "input",
+        name: "managerName",
+        message: "Please enter the Managers Name",
+    },
+
+    {
+        type: "input",
+        name: "managerID",
+        message: "Please enter the Managers work ID Number",
+    },
+
+    {
+        type: "input",
+        name: "managerEmail",
+        message: "Please enter the Managers work email address",
+    },
+
+    {
+        type: "input",
+        name: "managerOfficeNumber",
+        message: "Please enter the managers office number",
+    },
+];
+
+const employeeQuestions = [
+    {
+        type: "input",
+        name: "employeeName",
+        message: "Please enter the employees name",
+    },
+
+    {
+        type: "input",
+        name: "managerID",
+        message: "Please enter the employees work ID number",
+    },
+
+    {
+        type: "input",
+        name: "managerEmail",
+        message: "Please enter the employees work email address",
+    },
+
+    {
+        type: "input",
+        name: "managerOfficeNumber",
+        message: "Please enter the managers office number",
+    },
+]
+
+const teamQuestions = [{
+    type: "list",
+    name: "employeeType",
+    message: " Please select which type of employee you would like to create",
+    choices: ["intern", "engineer", "I am done adding team members"]
+}]
+
+
+
+function createTeam(){
+        inquire.prompt(teamQuestions)
+        .then(teamRes => {
+          
+            switch (teamRes.employeeType) {
+                case "engineer": 
+                    //call fucntion to ask enginner questions
+                    break;
+                case "intern":
+                //to ask intern question internInfo();
+                    break;
+                default:
+                /// function will help build our team
+                    break;
+            }
+        })
+};
+
+
+
+function managerInfo(){
+    inquirer.prompt(managerQuestions)
+    .then(responses => {
+       
+        const manager = new Manager(responses.managerName, responses.managerID, responses.managerEmail, responses.managerOfficeNumber)
+        console.log("New manager", manager)
+        team.push(manager);
+        createTeam();
+        //call a function thats going to ask if you want to 
+        // - create and enginer
+        //- create intern
+        //- stop makinga team
+    })
+};
+
+managerInfo();
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
