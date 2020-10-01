@@ -17,11 +17,11 @@
   npm i
 
   ## Usage
-  1. In your terminal cd into the Develop folder that contains the index.js file.
-  2. Run the index file using node (node index.js)
-  3. You will then answer a series of questions. These questions will make up your read me file so please read them carefully. If you make a mistake you can always edit it once the file is made.
-  4. Once complete the readme file will be created inside of the Develop folder.
-  5. Feel free to then move the read me file into your personal folder from there. 
+  1. In your terminal cd into the Develop folder that contains the app.js file.
+  2. Run the app file using node (node app.js)
+  3. You will then answer a series of questions related to the manager for the team. The manager will be created first since the employees will be under the manager.
+  4. Once you complete the manager questions you will be able to select employees to add. There will be two options either intern or engineer. You can go through and add as many employees as you would like.
+  5. Once you are complete you will select "I am done adding employees". Once that option is selected you will see a folder be created called outputs. Inside of that folder will be an team.html file that will contain all of your team members. 
 
   ## License
   [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
