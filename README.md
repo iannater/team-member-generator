@@ -22,6 +22,7 @@
   3. You will then answer a series of questions related to the manager for the team. The manager will be created first since the employees will be under the manager.
   4. Once you complete the manager questions you will be able to select employees to add. There will be two options either intern or engineer. You can go through and add as many employees as you would like.
   5. Once you are complete you will select "I am done adding employees". Once that option is selected you will see a folder be created called outputs. Inside of that folder will be an team.html file that will contain all of your team members. 
+  <iframe src="https://drive.google.com/file/d/1reIR75Nutn0-Eg_gddjj3XZbudRLXUky/preview" width="640" height="480"></iframe>
 
   ## License
   [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
